@@ -1,0 +1,19 @@
+name: Integrations
+ 
+on:
+  pull_request:
+    branches: [ main ]
+ 
+jobs:
+  build:
+ 
+    runs-on: macos-latest
+ 
+    steps:
+    - uses: actions/checkout@v2
+     
+    - name: Select Xcode
+      run: sudo xcode-select -switch /Applications/Xcode_13.2.1.app
+     
+    - name: Build and Test
+      run: xcodebuild test -project TestCICD.xcodeproj -scheme "TestCICD" -destination 'platform=iOS Simulator,name=iPhone 12,OS=15.2'
