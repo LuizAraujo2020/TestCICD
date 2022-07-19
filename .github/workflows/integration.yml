@@ -17,5 +17,5 @@ jobs:
     - name: Select Xcode
       run: sudo xcode-select -switch /Applications/Xcode_13.2.1.app
      
-    - name: Build and Test
-      run: xcodebuild test -project TestCICD.xcodeproj -scheme "TestCICD" -destination 'platform=iOS Simulator,name=iPhone 12,OS=15.2'
+    #- name: Build and Test
+    #  run: xcodebuild test -project TestCICD.xcodeproj -scheme "TestCICD" -destination 'platform=iOS Simulator,name=iPhone 12,OS=15.2'
